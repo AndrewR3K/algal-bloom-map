@@ -1,8 +1,10 @@
 <template>
   <div class="flex flex-col h-screen justify-between bg-gray-100 dark:bg-neutral-800 h-full">
     <Nav />
-    <RouterView />
-    <Footer />
+    <div class="min-h-screen flex flex-col justify-between">
+      <RouterView class="flex-grow" />
+      <Footer />
+    </div>
   </div>
 </template>
 

@@ -1,8 +1,5 @@
 <template>
-  <main
-    class="text-gray-500 dark:text-gray-100 font-sans mt-16"
-    style="min-height: calc(100vh - 220px)"
-  >
+  <main class="text-gray-500 dark:text-gray-100 font-sans mt-16">
     <div class="max-w-4xl mx-auto py-10 px-6 bg-white dark:bg-neutral-600 shadow-md rounded-md">
       <h1 class="text-2xl font-semibold mb-3">Want to report an Algal Bloom?</h1>
       <p class="mb-6">
