@@ -13,7 +13,16 @@ import 'leaflet.markercluster/dist/MarkerCluster.Default.css'
 import * as L from 'leaflet'
 import 'leaflet.markercluster'
 
+import logo from '@/assets/logo.png'
+
 const initialMap = shallowRef(null)
+
+const logoIcon = L.icon({
+  iconUrl: logo,
+  iconSize: [32, 32],
+  iconAnchor: [16, 0],
+  popupAnchor: [0, 0]
+})
 
 onMounted(async () => {
   initialMap.value = L.map('map', {
@@ -57,12 +66,12 @@ onMounted(async () => {
       return false
     })
 
-    console.log(filtered_data)
-
     for (let index = 0; index < filtered_data?.length; index++) {
       const record = filtered_data[index]
       if (record?.Bloom_Longitude !== null && record?.Bloom_Latitude !== null) {
-        const each_marker = new L.marker([record.Bloom_Latitude, record.Bloom_Longitude]).bindPopup(
+        const each_marker = new L.marker([record.Bloom_Latitude, record.Bloom_Longitude], {
+          icon: logoIcon
+        }).bindPopup(
           `
             <dl class="max-w-md text-gray-900 divide-y divide-gray-200 text-xs">
                 <div class="flex flex-col pb-3">
