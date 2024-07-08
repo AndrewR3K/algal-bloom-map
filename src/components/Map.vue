@@ -9,6 +9,9 @@ import axios from 'axios'
 import 'leaflet/dist/leaflet.css'
 import 'leaflet.markercluster/dist/MarkerCluster.css'
 import 'leaflet.markercluster/dist/MarkerCluster.Default.css'
+import 'leaflet-geosearch/dist/geosearch.css'
+
+import * as GeoSearch from 'leaflet-geosearch'
 
 import * as L from 'leaflet'
 import 'leaflet.markercluster'
@@ -35,6 +38,14 @@ onMounted(async () => {
     keepInView: true,
     tap: false
   }).setView([37.7749, -122.431297], 6)
+
+  const search = new GeoSearch.GeoSearchControl({
+    notFoundMessage: 'Sorry, that address could not be found.',
+    style: 'button',
+    provider: new GeoSearch.OpenStreetMapProvider()
+  })
+
+  initialMap.value.addControl(search)
 
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     detectRetina: true,
