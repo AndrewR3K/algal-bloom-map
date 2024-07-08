@@ -1,5 +1,5 @@
 <template>
-  <main class="mt-14" style="min-height: 70vh relative">
+  <main class="mt-14" style="min-height: calc(100vh - 220px)">
     <Map />
   </main>
 </template>

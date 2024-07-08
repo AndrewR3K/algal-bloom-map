@@ -39,19 +39,27 @@
               >Map</RouterLink
             >
           </li>
-          <!-- <li class="flex items-center">
+          <li class="flex items-center">
+            <RouterLink
+              to="/report"
+              class="lg:hover:text-cyan-600 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold dark:text-gray-100 text-gray-600"
+              >Report</RouterLink
+            >
+          </li>
+          <li class="flex items-center">
             <RouterLink
               to="/about"
               class="lg:hover:text-cyan-600 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold dark:text-gray-100 text-gray-600"
               >About</RouterLink
             >
-          </li> -->
+          </li>
         </ul>
         <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
           <li class="flex items-center">
             <a
               class="lg:hover:text-cyan-600 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold dark:text-gray-100 text-gray-600"
-              href="#"
+              target="_blank"
+              href="https://github.com/AndrewR3K/algal-bloom-map"
             >
               <font-awesome-icon class="text-lg leading-lg" :icon="['fab', 'github']" />
               <span class="lg:hidden inline-block ml-2">Github</span>
