@@ -28,7 +28,7 @@
         </button>
       </div>
       <div
-        class="lg:flex lg:rounded-none rounded-md flex-grow items-center bg-white dark:bg-neutral-600 dark:lg:bg-transparent lg:bg-transparent lg:shadow-none"
+        class="lg:flex lg:rounded-none rounded-md flex-grow items-center border-2 lg:border-0 border-cyan-600 bg-white dark:bg-neutral-600 dark:lg:bg-transparent lg:bg-transparent lg:shadow-none"
         :class="{ hidden: !showMenu, block: showMenu }"
       >
         <ul class="flex flex-col lg:flex-row list-none mr-auto">
