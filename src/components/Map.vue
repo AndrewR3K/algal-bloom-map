@@ -26,14 +26,18 @@ const logoIcon = L.icon({
 
 onMounted(async () => {
   initialMap.value = L.map('map', {
-    zoomControl: true,
+    zoomControl: false,
     zoom: 1,
     zoomAnimation: false,
     fadeAnimation: true,
-    markerZoomAnimation: true
+    markerZoomAnimation: true,
+    autoPan: false,
+    keepInView: true,
+    tap: false
   }).setView([37.7749, -122.431297], 6)
 
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    detectRetina: true,
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(initialMap.value)
@@ -73,7 +77,7 @@ onMounted(async () => {
           icon: logoIcon
         }).bindPopup(
           `
-            <dl class="max-w-md text-gray-900 divide-y divide-gray-200 text-xs">
+            <dl class="max-w-md max-h-72 md:max-h-fit overflow-scroll md:overflow-auto text-gray-900 divide-y divide-gray-200 text-xs">
                 <div class="flex flex-col pb-3">
                     <dt class="mb-1 mr-2 text-gray-500">Advisory Window</dt>
                     <dd class="font-semibold">
