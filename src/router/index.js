@@ -9,18 +9,7 @@ const router = createRouter({
       name: 'home',
       component: HomeView,
       meta: {
-        title: 'Map',
-        metaTags: [
-          {
-            name: 'description',
-            content:
-              'The Algal Bloom Map is a dynamic and interactive tool that visualizes data on current algal bloom reports across California. By aggregating and presenting this information, we aim to help researchers, environmentalists, and the general public stay informed about the locations and severity of algal blooms.'
-          },
-          {
-            name: 'keywords',
-            content: 'algal, bloom, algal bloom, california, map, algal bloom map '
-          }
-        ]
+        title: 'Map'
       }
     },
     {
@@ -28,18 +17,7 @@ const router = createRouter({
       name: 'about',
       component: () => import('../views/AboutView.vue'),
       meta: {
-        title: 'About',
-        metaTags: [
-          {
-            name: 'description',
-            content:
-              'The Algal Bloom Map is a dynamic and interactive tool that visualizes data on current algal bloom reports across California. By aggregating and presenting this information, we aim to help researchers, environmentalists, and the general public stay informed about the locations and severity of algal blooms.'
-          },
-          {
-            name: 'keywords',
-            content: 'algal, bloom, algal bloom, california, map, algal bloom map '
-          }
-        ]
+        title: 'About'
       }
     },
     {
@@ -47,18 +25,7 @@ const router = createRouter({
       name: 'report',
       component: () => import('../views/ReportView.vue'),
       meta: {
-        title: 'Report',
-        metaTags: [
-          {
-            name: 'description',
-            content:
-              'The Algal Bloom Map is a dynamic and interactive tool that visualizes data on current algal bloom reports across California. By aggregating and presenting this information, we aim to help researchers, environmentalists, and the general public stay informed about the locations and severity of algal blooms.'
-          },
-          {
-            name: 'keywords',
-            content: 'algal, bloom, algal bloom, california, map, algal bloom map '
-          }
-        ]
+        title: 'Report'
       }
     }
   ]
