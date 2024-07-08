@@ -42,7 +42,8 @@ onMounted(async () => {
   const search = new GeoSearch.GeoSearchControl({
     notFoundMessage: 'Sorry, that address could not be found.',
     style: 'button',
-    provider: new GeoSearch.OpenStreetMapProvider()
+    provider: new GeoSearch.OpenStreetMapProvider(),
+    showMarker: false
   })
 
   initialMap.value.addControl(search)
